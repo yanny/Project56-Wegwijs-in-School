@@ -7,6 +7,9 @@ public class NavigatiePunt {
 	public NavigatiePunt() {
 		
 	}
+	public NavigatiePunt(String naam) {
+		this.naam = naam;
+	}
 	
 	public Long getId() {
 		return id;
