@@ -20,18 +20,25 @@ public final class R {
         public static final int icon2=0x7f020002;
     }
     public static final class id {
-        public static final int btnAfsluiten=0x7f060002;
-        public static final int btnAnuleren=0x7f060005;
-        public static final int btnTraceit=0x7f060001;
-        public static final int btnTraceme=0x7f060000;
-        public static final int btnVerder=0x7f060004;
-        public static final int spLocal=0x7f060003;
-        public static final int sptxtdocent=0x7f060006;
+        public static final int btnAfsluiten=0x7f060004;
+        public static final int btnAnuleren=0x7f06000a;
+        public static final int btnDropdownmenu=0x7f060003;
+        public static final int btnQrscanner=0x7f060002;
+        public static final int btnTraceit=0x7f060009;
+        public static final int btnTraceme=0x7f060008;
+        public static final int btnVerder=0x7f060007;
+        public static final int lokaalnummer=0x7f060005;
+        public static final int spLocal=0x7f060006;
+        public static final int sptxtdocent=0x7f06000b;
+        public static final int tableRow1=0x7f060000;
+        public static final int textView1=0x7f060001;
     }
     public static final class layout {
-        public static final int main=0x7f030000;
-        public static final int traceit=0x7f030001;
-        public static final int traceme=0x7f030002;
+        public static final int huidigepositie=0x7f030000;
+        public static final int huidigepositiedropdown=0x7f030001;
+        public static final int main=0x7f030002;
+        public static final int traceit=0x7f030003;
+        public static final int traceme=0x7f030004;
     }
     public static final class string {
         public static final int afsluiten=0x7f040004;
