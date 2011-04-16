@@ -1,16 +1,20 @@
 package model;
 
-public class Vertex {
+public class Vertex implements Comparable<Vertex> {
 	
-	Long id;
-	Vleugel vleugel;
-	Edge[] takken;
-	Double minAfstand;
-	Vertex vorige;
-	Raster raster;
+	private Long id;
+	private Vleugel vleugel;
+	private Edge[] takken;
+	private Double minAfstand = Double.POSITIVE_INFINITY;
+	private Vertex vorige;
+	private Raster raster;
 	
 	public Vertex() {
 		
+	}
+	
+	public Vertex(Vleugel vleugel) {
+		this.vleugel = vleugel;
 	}
 	
 	public int compareTo(Vertex ander) {

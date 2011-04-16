@@ -30,6 +30,7 @@
         android:layout_marginBottom="7dip" />
            
       <TableRow android:padding="3dip" >
+
         
         <Button
         	android:id="@+id/btnQrscanner"
@@ -45,6 +46,8 @@
 			android:text="Dropdown menu"
 			android:paddingLeft="10dip"
 		/>
+		
+		
     </TableRow>
              
     <TableRow android:padding="50dip" >

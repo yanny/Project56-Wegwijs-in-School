@@ -6,19 +6,16 @@
     android:stretchColumns="1">
     <TableRow>
     <TextView 
-		android:text=" Huidige positie opgeven"
-		android:padding="3dip" />
+		android:text="Huidige positie opgeven (vertrekpunt)" android:padding="3dip" />
     </TableRow>  
+    
+    
     <TableRow>
-        <TextView
-			android:layout_width="wrap_content"
-	        android:layout_height="wrap_content"
-	        android:text="Lokaalnummer" 
-	        android:layout_gravity="right" android:id="@+id/lokaalnummer"/>
+        <Spinner android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/vleugel"></Spinner>
 	    <Spinner
-        	android:id="@+id/spLocal"
         	android:layout_width="fill_parent"
-        	android:layout_height="wrap_content" />  		
+        	android:layout_height="wrap_content" android:id="@+id/verdieping"/>
+	    <Spinner android:layout_height="wrap_content" android:layout_width="wrap_content" android:id="@+id/lokaalnummer"></Spinner>  		
     </TableRow>
     <View
         android:layout_height="1dip"
@@ -27,13 +24,7 @@
         
    
       <TableRow android:padding="3dip" >
-        <Button
-        	android:id="@+id/btnVerder"
-			android:layout_width="wrap_content"
-			android:layout_height="wrap_content"
-			android:text="@string/verder"
-			android:paddingLeft="10dip"
-		/>
+          <Button android:id="@+id/btnVerder" android:text="@string/verder" android:paddingLeft="10dip" android:layout_width="wrap_content" android:layout_height="wrap_content"></Button>
         <Button
         	android:id="@+id/btnAfsluiten"
 			android:layout_width="fill_parent"

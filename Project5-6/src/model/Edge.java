@@ -1,12 +1,17 @@
 package model;
 
 public class Edge {
-	Long id;
+	private Long id;
 	private Vertex target;
-	Double gewicht;
+	private Double gewicht;
 	
 	public Edge() {
 		
+	}
+	
+	public Edge(Vertex target, double gewicht) {
+		this.target = target;
+		this.gewicht = gewicht;
 	}
 	
 	public Long getId() {

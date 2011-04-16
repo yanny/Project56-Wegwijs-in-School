@@ -5,14 +5,43 @@
     <string name="traceit">Trace it</string>
     <string name="traceme">Trace me</string> 
     <string name="afsluiten">Afsluiten</string>  
-    <string name="local">Local : </string>
-    <string name="verder">ok</string>
-    <string name="anuleren">Anuleren</string>
-    <string name="docent">Docent  : </string>
+    <string name="lokaal">Lokaal : </string>
+    <string name="verder">OK</string>
+    <string name="anuleren">Annuleren</string>
+    <string name="qrscan">QR Scan</string>
+    <string name="docent">Docent: </string>
     <string-array name="arrayDocent">
         <item>docent1</item>
         <item>docent2</item>        
-    </string-array>     
+    </string-array>
+    
+    <string-array name="vleugels">
+    	<item name="I">I</item>
+    	<item name="J">J</item>
+    	<item name="K">K</item>
+    	
+    	<item name="C">C</item>
+    	<item name="D">D</item>
+    	<item name="E">E</item>
+    	
+    	<item name="B">B</item>
+    	<item name="A">A</item>
+    </string-array>
+    
+    <string-array name="verdiepingen">
+    <item>0</item>
+    <item>1</item>
+    <item>2</item>
+    <item>3</item>
+    </string-array>
+    
+    <string-array name="lokaalnummers">
+    <item>18</item>
+    <item>20</item>
+    </string-array>
+    
+    
+    
     <string-array name="arrayLocal">
         <item>   +extern </item>
 		<item> +GdJ </item>
@@ -693,5 +722,6 @@
 		<item> O4.214 </item>
 		<item> N0.008 </item>         
     </string-array>
+
 </resources>
 

@@ -17,7 +17,12 @@
         <activity android:name=".toonroute"></activity>
         <activity android:name=".Anuleren"></activity>
         <activity android:name=".Opnieuw"></activity>
-        <uses-permission android:name="android.permission.INTERNET"/>    
+        <activity android:name=".Huidigepositie"></activity>
+        <activity android:name=".Vertrekpunt"></activity>
+        
+        <activity android:name="Huidigepositiedropdown"></activity><uses-permission android:name="android.permission.INTERNET"/>    
      	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+     	
+     	
     </application>
 </manifest> 

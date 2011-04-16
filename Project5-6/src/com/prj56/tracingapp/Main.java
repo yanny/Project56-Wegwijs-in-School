@@ -17,25 +17,26 @@ public class Main extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
-       
-    
     
     //Trace me button click
+    /* deze is tijdelijk op onklikbaar gemaakt, we focus op trace it */
     Button b1 = (Button) findViewById(R.id.btnTraceme);
 
     b1.setOnClickListener(new View.OnClickListener() {
     	public void onClick(View view) {
-            Intent intent = new Intent(view.getContext(), Traceme.class);
+            Intent intent = new Intent(view.getContext(), Traceit.class);
+
             startActivity(intent);
         }
     });
     
     //Trace it button click
-    Button b2 = (Button) findViewById(R.id.btnTraceit);
+    Button b2 = (Button) findViewById(R.id.btnTraceit);    
     
     b2.setOnClickListener(new View.OnClickListener() {
     	public void onClick(View view) {
-    		Intent intent = new Intent(view.getContext(), Traceit.class);
+    		Intent intent = new Intent(view.getContext(),Vertrekpunt.class);
+    		
             startActivity(intent);
         }
     });
