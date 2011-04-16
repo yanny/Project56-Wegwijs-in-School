@@ -16,16 +16,14 @@
     </string-array>
     
     <string-array name="vleugels">
-    	<item name="I">I</item>
-    	<item name="J">J</item>
-    	<item name="K">K</item>
-    	
+    	<item name="A">A</item>
+    	<item name="B">B</item>
     	<item name="C">C</item>
     	<item name="D">D</item>
     	<item name="E">E</item>
-    	
-    	<item name="B">B</item>
-    	<item name="A">A</item>
+    	<item name="I">I</item>
+    	<item name="J">J</item>
+    	<item name="K">K</item>
     </string-array>
     
     <string-array name="verdiepingen">

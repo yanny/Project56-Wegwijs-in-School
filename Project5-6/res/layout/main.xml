@@ -1,40 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:stretchColumns="0">
-    <TableRow>
-    <TextView 
-		android:text="Welkom!"
-		android:padding="3dip" />
-    </TableRow>
-     <View
-        android:layout_height="1dip"
-        android:background="#FF909090"
-        android:layout_marginBottom="100dip" />
-         
-    <TableRow android:padding="3dip" >
-        <Button android:text="@string/traceme" android:id="@+id/btnTraceme" android:paddingLeft="1dip" android:layout_height="wrap_content" android:layout_width="fill_parent" android:clickable="false"></Button>
-    </TableRow>
-    
-    <TableRow android:padding="3dip">
-        <Button
-			android:layout_width="fill_parent"
-			android:layout_height="wrap_content"
-			android:text="@string/traceit"
-			android:id="@+id/btnTraceit"
-			android:paddingLeft="1dip"
-		/>
-    </TableRow>
-    
-    <TableRow android:padding="3dip">
-        <Button
-			android:layout_width="fill_parent"
-			android:layout_height="wrap_content"
-			android:text="@string/afsluiten"
-			android:id="@+id/btnAfsluiten"
-			android:paddingLeft="1dip"
-		/>
-    </TableRow>
+	android:layout_width="fill_parent" android:layout_height="fill_parent"
+	android:stretchColumns="0">
+	<TableRow>
+		<TextView android:text="Welkom!" android:padding="3dip" />
+	</TableRow>
+	<View android:layout_height="1dip" android:background="#FF909090"
+		android:layout_marginBottom="100dip" />
+	<Button android:text="@string/traceme" android:enabled="false" android:clickable="false" android:layout_width="fill_parent" android:paddingLeft="1dip" android:id="@+id/btnTraceme" android:layout_height="wrap_content"></Button>
+
+	<TableRow android:padding="3dip">
+	</TableRow>
+
+	<TableRow android:padding="3dip">
+		<Button android:layout_width="fill_parent"
+			android:layout_height="wrap_content" android:text="@string/traceit"
+			android:id="@+id/btnTraceit" android:paddingLeft="1dip" />
+	</TableRow>
+
+	<TableRow android:padding="3dip">
+		<Button android:layout_width="fill_parent"
+			android:layout_height="wrap_content" android:text="@string/afsluiten"
+			android:id="@+id/btnAfsluiten" android:paddingLeft="1dip" />
+	</TableRow>
 </TableLayout>

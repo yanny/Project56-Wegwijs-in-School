@@ -1,4 +1,5 @@
 package com.prj56.tracingapp;
+
 import com.prj56.tracingapp.Main;
 import com.prj56.tracingapp.R;
 
@@ -24,7 +25,7 @@ public class Main extends Activity {
 
     b1.setOnClickListener(new View.OnClickListener() {
     	public void onClick(View view) {
-            Intent intent = new Intent(view.getContext(), Traceit.class);
+            Intent intent = new Intent(view.getContext(), Bestemming.class);
 
             startActivity(intent);
         }
@@ -35,7 +36,7 @@ public class Main extends Activity {
     
     b2.setOnClickListener(new View.OnClickListener() {
     	public void onClick(View view) {
-    		Intent intent = new Intent(view.getContext(),Vertrekpunt.class);
+    		Intent intent = new Intent(view.getContext(),VertrekpuntMethodes.class);
     		
             startActivity(intent);
         }

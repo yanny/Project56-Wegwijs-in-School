@@ -12,15 +12,14 @@
             </intent-filter>
         </activity>
         <activity android:name=".Traceme"></activity>
-        <activity android:name=".Traceit"></activity>
+        <activity android:name=".Bestemming"></activity>
         <activity android:name=".Afsluiten"></activity>
         <activity android:name=".toonroute"></activity>
         <activity android:name=".Anuleren"></activity>
         <activity android:name=".Opnieuw"></activity>
-        <activity android:name=".Huidigepositie"></activity>
-        <activity android:name=".Vertrekpunt"></activity>
-        
-        <activity android:name="Huidigepositiedropdown"></activity><uses-permission android:name="android.permission.INTERNET"/>    
+        <activity android:name=".VertrekpuntMethodes"></activity>
+        <activity android:name="Huidigepositiedropdown"></activity>
+        <uses-permission android:name="android.permission.INTERNET"/>    
      	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
      	
      	
