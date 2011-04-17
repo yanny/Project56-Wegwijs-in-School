@@ -3,8 +3,6 @@ package com.prj56.tracingapp;
 import com.prj56.tracingapp.R;
 
 import android.app.Activity;
-import android.content.Context;
-import android.content.DialogInterface.OnClickListener;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -15,28 +13,27 @@ import android.widget.Spinner;
 
 public class Huidigepositiedropdown extends Activity {
 	/** Called when the activity is first created. */
-	
+
 	private Spinner lokaalnummersSpinner;
-	 private Spinner verdiepingSpinner;
-	 private Spinner huidigeVleugelSpinner;
+	private Spinner verdiepingSpinner;
+	private Spinner huidigeVleugelSpinner;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.huidigepositiedropdown);
-		
+
 		lokaalnummersSpinner = (Spinner) findViewById(R.id.lokaalnummer);
 		verdiepingSpinner = (Spinner) findViewById(R.id.verdieping);
 		huidigeVleugelSpinner = (Spinner) findViewById(R.id.vleugel);
-		
+
 		vleugelsTonen();
 		verdiepingenTonen();
 		lokaalnummersTonen();
 
-		
 		okKnopTonen();
 		annulerenKnopTonen();
-		
+
 	}
 
 	/**
@@ -74,7 +71,7 @@ public class Huidigepositiedropdown extends Activity {
 				.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 		lokaalnummersSpinner.setAdapter(lokaalnummersAdap);
 	}
-	
+
 	/**
 	 * Ok knop tonen
 	 */
@@ -96,17 +93,16 @@ public class Huidigepositiedropdown extends Activity {
 							public void onNothingSelected(AdapterView<?> parent) {
 
 							}
-							
+
 						});
-				Intent intent = new Intent(view.getContext(),Bestemming.class);
-	            startActivity(intent);
-		
+				//Volgende scherm is positie bevestigen
+				Intent intent = new Intent(view.getContext(), HuidigePositieBevestigen.class);
+				startActivity(intent);
+
 			}
-		});	
+		});
 	}
-	
-	
-	
+
 	/**
 	 * Annuleren knop
 	 */

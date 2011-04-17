@@ -19,6 +19,9 @@
         <activity android:name=".Opnieuw"></activity>
         <activity android:name=".VertrekpuntMethodes"></activity>
         <activity android:name="Huidigepositiedropdown"></activity>
+        <activity android:name="HuidigePositieBevestigen"></activity>
+        <activity android:name="Route"></activity>
+        
         <uses-permission android:name="android.permission.INTERNET"/>    
      	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
      	
