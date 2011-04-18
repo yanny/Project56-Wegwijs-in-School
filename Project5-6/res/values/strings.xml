@@ -10,6 +10,7 @@
     <string name="anuleren">Annuleren</string>
     <string name="qrscan">QR Scan</string>
     <string name="docent">Docent: </string>
+    
     <string-array name="arrayDocent">
         <item>docent1</item>
         <item>docent2</item>        

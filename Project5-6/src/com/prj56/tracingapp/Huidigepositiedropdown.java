@@ -4,6 +4,7 @@ import com.prj56.tracingapp.R;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -80,21 +81,37 @@ public class Huidigepositiedropdown extends Activity {
 
 		okKnop.setOnClickListener(new View.OnClickListener() {
 			public void onClick(View view) {
+				
+				//get vleugel, verdieping, lokaalnummer 
+        		//Todo: haal vleugel, verdieping en lokaalnummer uit de spinner
+        		//Todo: met string concatenate aan elkaar plakken in de vorm van K.1.18 met puntjes
+        		String vertrekLokaal = "K.1.18";
+        		
+        		/*
+        		lokaalnummersSpinner
+				.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
 
-				lokaalnummersSpinner
-						.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+					public void onItemSelected(AdapterView<?> parent,
+							View view, int pos, long id) {
+						Object item = parent.getItemAtPosition(pos);
+						String lokaalnr = item.toString();
+					}
 
-							public void onItemSelected(AdapterView<?> parent,
-									View view, int pos, long id) {
-								Object item = parent.getItemAtPosition(pos);
-								String lokaalnr = item.toString();
-							}
+					public void onNothingSelected(AdapterView<?> parent) {
 
-							public void onNothingSelected(AdapterView<?> parent) {
+					}
 
-							}
-
-						});
+				});
+				*/
+        		
+        		//opslaan in preferences
+        		
+        		int mode = Activity.MODE_PRIVATE;
+        		SharedPreferences mijnPreferences = getSharedPreferences("mijnPreferences", mode);
+        		SharedPreferences.Editor editor = mijnPreferences.edit();
+        		editor.putString("vertrekLokaal", vertrekLokaal);
+        		editor.commit();
+				
 				//Volgende scherm is positie bevestigen
 				Intent intent = new Intent(view.getContext(), HuidigePositieBevestigen.class);
 				startActivity(intent);
