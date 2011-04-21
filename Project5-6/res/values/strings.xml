@@ -17,14 +17,14 @@
     </string-array>
     
     <string-array name="vleugels">
-    	<item name="A">A</item>
-    	<item name="B">B</item>
-    	<item name="C">C</item>
-    	<item name="D">D</item>
-    	<item name="E">E</item>
-    	<item name="I">I</item>
-    	<item name="J">J</item>
-    	<item name="K">K</item>
+    	<item>A</item>
+    	<item>B</item>
+    	<item>C</item>
+    	<item>D</item>
+    	<item>E</item>
+    	<item>I</item>
+    	<item>J</item>
+    	<item>K</item>
     </string-array>
     
     <string-array name="verdiepingen">
@@ -35,10 +35,11 @@
     </string-array>
     
     <string-array name="lokaalnummers">
+    <item>04</item>
+    <item>06</item>
     <item>18</item>
     <item>20</item>
     </string-array>
-    
     
     
     <string-array name="arrayLocal">

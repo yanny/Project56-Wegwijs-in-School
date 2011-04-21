@@ -1,13 +1,21 @@
 package model;
 
 public class Lokaal {
-	Long id;
-	String naam;
-	String lokaalcode;
-	String beschrijving;
-	Verdieping verdieping;
-	Vak vakjeMetDeur;
+	private Long id;
+	private String naam;
+	private String lokaalcode;
+	private String beschrijving;
+	private Verdieping verdieping;
+	private Vak vakjeMetDeur;
 	
+	public Lokaal() {
+		
+	}
+	public Lokaal(String lokaalcode, String naam, Verdieping verdieping) {
+		this.lokaalcode = lokaalcode;
+		this.naam = naam;
+		this.verdieping = verdieping;
+	}
 	public Long getId() {
 		return id;
 	}
@@ -56,7 +64,5 @@ public class Lokaal {
 		this.vakjeMetDeur = vakjeMetDeur;
 	}
 
-	public Lokaal() {
-		
-	}
+
 }

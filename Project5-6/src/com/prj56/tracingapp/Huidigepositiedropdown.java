@@ -15,9 +15,8 @@ import android.widget.Spinner;
 public class Huidigepositiedropdown extends Activity {
 	/** Called when the activity is first created. */
 
-	private Spinner lokaalnummersSpinner;
-	private Spinner verdiepingSpinner;
-	private Spinner huidigeVleugelSpinner;
+	private Spinner lokaalnummersSpinner, verdiepingSpinner, huidigeVleugelSpinner;
+	public String vertrekLokaalnummer, vertrekVleugel, vertrekVerdieping;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -34,7 +33,7 @@ public class Huidigepositiedropdown extends Activity {
 
 		okKnopTonen();
 		annulerenKnopTonen();
-
+		
 	}
 
 	/**
@@ -47,6 +46,8 @@ public class Huidigepositiedropdown extends Activity {
 		vleugelsAdap
 				.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 		huidigeVleugelSpinner.setAdapter(vleugelsAdap);
+		huidigeVleugelSpinner.setPrompt("Vleugel");
+		setVleugelListener();
 	}
 
 	/**
@@ -59,6 +60,8 @@ public class Huidigepositiedropdown extends Activity {
 		verdiepingAdap
 				.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 		verdiepingSpinner.setAdapter(verdiepingAdap);
+		verdiepingSpinner.setPrompt("Verdieping");
+		setVerdiepingListener();
 	}
 
 	/**
@@ -71,41 +74,23 @@ public class Huidigepositiedropdown extends Activity {
 		lokaalnummersAdap
 				.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 		lokaalnummersSpinner.setAdapter(lokaalnummersAdap);
+		lokaalnummersSpinner.setPrompt("Lokaalnummer");
+		setLokaalnummerListener();
 	}
 
+	
+	
 	/**
 	 * Ok knop tonen
 	 */
 	private void okKnopTonen() {
 		Button okKnop = (Button) findViewById(R.id.btnVerder);
-
+		
 		okKnop.setOnClickListener(new View.OnClickListener() {
 			public void onClick(View view) {
-				
-				//get vleugel, verdieping, lokaalnummer 
-        		//Todo: haal vleugel, verdieping en lokaalnummer uit de spinner
-        		//Todo: met string concatenate aan elkaar plakken in de vorm van K.1.18 met puntjes
-        		String vertrekLokaal = "K.1.18";
-        		
-        		/*
-        		lokaalnummersSpinner
-				.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-
-					public void onItemSelected(AdapterView<?> parent,
-							View view, int pos, long id) {
-						Object item = parent.getItemAtPosition(pos);
-						String lokaalnr = item.toString();
-					}
-
-					public void onNothingSelected(AdapterView<?> parent) {
-
-					}
-
-				});
-				*/
+				String vertrekLokaal = vertrekVleugel + "." + vertrekVerdieping + "." + vertrekLokaalnummer;  
         		
         		//opslaan in preferences
-        		
         		int mode = Activity.MODE_PRIVATE;
         		SharedPreferences mijnPreferences = getSharedPreferences("mijnPreferences", mode);
         		SharedPreferences.Editor editor = mijnPreferences.edit();
@@ -115,7 +100,43 @@ public class Huidigepositiedropdown extends Activity {
 				//Volgende scherm is positie bevestigen
 				Intent intent = new Intent(view.getContext(), HuidigePositieBevestigen.class);
 				startActivity(intent);
-
+			}
+		});
+	}
+	
+	private void setVleugelListener() {
+		huidigeVleugelSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+			public void onItemSelected(AdapterView<?> parent,
+					View view, int pos, long id) {
+				Object item = parent.getItemAtPosition(pos);
+				vertrekVleugel = item.toString();
+			}
+			public void onNothingSelected(AdapterView<?> parent) {
+			}
+		});
+	}
+	
+	private void setLokaalnummerListener() {
+		lokaalnummersSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+			public void onItemSelected(AdapterView<?> parent,
+					View view, int pos, long id) {
+				Object item = parent.getItemAtPosition(pos);
+				vertrekLokaalnummer = item.toString();
+			}
+			public void onNothingSelected(AdapterView<?> parent) {
+				System.out.println("hallo");
+			}
+		});
+	}
+	
+	private void setVerdiepingListener() {
+		verdiepingSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+			public void onItemSelected(AdapterView<?> parent,
+					View view, int pos, long id) {
+				Object item = parent.getItemAtPosition(pos);
+				vertrekVerdieping = item.toString();
+			}
+			public void onNothingSelected(AdapterView<?> parent) {
 			}
 		});
 	}

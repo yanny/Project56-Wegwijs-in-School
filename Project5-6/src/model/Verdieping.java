@@ -10,7 +10,7 @@ public class Verdieping {
 		
 	}
 	
-	public Verdieping(String naam) {
+	public Verdieping(String naam, int nummer) {
 		this.naam = naam;
 	}
 

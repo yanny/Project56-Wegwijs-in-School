@@ -7,6 +7,15 @@ public class Vak {
 	Lokaal lokaal;
 	Raster raster;
 	boolean heeftDeur;
+	
+	public Vak() {
+		
+	}
+	public Vak(int rij, int kolom, Raster raster) {
+		this.rij = rij;
+		this.kolom = kolom;
+		this.raster = raster;
+	}
 
 	public Long getId() {
 		return id;
@@ -64,7 +73,5 @@ public class Vak {
 		this.heeftDeur = heeftDeur;
 	}
 
-	public Vak() {
-		
-	}
+
 }

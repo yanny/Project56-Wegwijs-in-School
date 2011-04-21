@@ -9,6 +9,10 @@ public class Raster {
 	public Raster() {
 		
 	}
+	
+	public Raster(int breedte, int hoogte) {
+		vakjes = new Vak[hoogte][breedte];
+	}
 
 	public Long getId() {
 		return id;
