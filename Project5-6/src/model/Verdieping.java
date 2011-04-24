@@ -1,17 +1,27 @@
 package model;
 
+import com.j256.ormlite.field.DatabaseField;
+import com.j256.ormlite.table.DatabaseTable;
+
+@DatabaseTable(tableName = "verdieping")
 public class Verdieping {
+
+	@DatabaseField(generatedId = true, columnName = "verdiepingID")
 	Long id;
+	@DatabaseField
 	String naam;
+	@DatabaseField(foreign = true, columnName = "graafID")
 	Graaf graaf;
+	@DatabaseField
 	int nummer;
-	
+
 	public Verdieping() {
-		
+
 	}
-	
+
 	public Verdieping(String naam, int nummer) {
 		this.naam = naam;
+		this.nummer = nummer;
 	}
 
 	public Long getId() {

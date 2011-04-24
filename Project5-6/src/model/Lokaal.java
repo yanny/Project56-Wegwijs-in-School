@@ -1,21 +1,35 @@
 package model;
 
+import com.j256.ormlite.field.DatabaseField;
+import com.j256.ormlite.table.DatabaseTable;
+
+@DatabaseTable(tableName = "lokaal")
 public class Lokaal {
+	@DatabaseField(generatedId = true, columnName = "lokaalID")
 	private Long id;
+	@DatabaseField
 	private String naam;
+	@DatabaseField
 	private String lokaalcode;
+	@DatabaseField
 	private String beschrijving;
+
+	@DatabaseField(foreign = true, columnName = "verdiepingID")
 	private Verdieping verdieping;
+
+	@DatabaseField(foreign = true, columnName = "vakMetDeurID")
 	private Vak vakjeMetDeur;
-	
+
 	public Lokaal() {
-		
+
 	}
+
 	public Lokaal(String lokaalcode, String naam, Verdieping verdieping) {
 		this.lokaalcode = lokaalcode;
 		this.naam = naam;
 		this.verdieping = verdieping;
 	}
+
 	public Long getId() {
 		return id;
 	}
@@ -63,6 +77,5 @@ public class Lokaal {
 	public void setVakjeMetDeur(Vak vakjeMetDeur) {
 		this.vakjeMetDeur = vakjeMetDeur;
 	}
-
 
 }

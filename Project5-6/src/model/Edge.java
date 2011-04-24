@@ -1,19 +1,26 @@
 package model;
 
+import com.j256.ormlite.field.DatabaseField;
+import com.j256.ormlite.table.DatabaseTable;
+
+@DatabaseTable(tableName = "edge")
 public class Edge {
+	@DatabaseField(generatedId = true, columnName = "edgeID")
 	private Long id;
+	@DatabaseField(foreign = true, foreignAutoRefresh = true)
 	private Vertex target;
+	@DatabaseField
 	private Double gewicht;
-	
+
 	public Edge() {
-		
+
 	}
-	
+
 	public Edge(Vertex target, double gewicht) {
 		this.target = target;
 		this.gewicht = gewicht;
 	}
-	
+
 	public Long getId() {
 		return id;
 	}

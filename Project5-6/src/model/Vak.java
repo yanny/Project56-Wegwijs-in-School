@@ -1,20 +1,43 @@
 package model;
 
+import com.j256.ormlite.field.DatabaseField;
+import com.j256.ormlite.table.DatabaseTable;
+
+@DatabaseTable(tableName = "vak")
 public class Vak {
+	@DatabaseField(generatedId = true, columnName = "vakID", id=true)
 	Long id;
-	int rij, kolom;
+
+	@DatabaseField
+	int rij;
+
+	@DatabaseField
+	int kolom;
+
+	@DatabaseField(foreign = true, columnName = "navigatiePuntID")
 	NavigatiePunt navigatiePunt;
+
+	@DatabaseField(foreign = true, columnName = "lokaalID")
 	Lokaal lokaal;
+
+	@DatabaseField(foreign = true, columnName = "rasterID")
 	Raster raster;
+
+	@DatabaseField
 	boolean heeftDeur;
-	
+
+	@DatabaseField
+	int breedte;
+
 	public Vak() {
-		
+
 	}
-	public Vak(int rij, int kolom, Raster raster) {
+
+	public Vak(int rij, int kolom, Raster raster, int breedte) {
 		this.rij = rij;
 		this.kolom = kolom;
 		this.raster = raster;
+		this.breedte = breedte;
 	}
 
 	public Long getId() {
@@ -73,5 +96,12 @@ public class Vak {
 		this.heeftDeur = heeftDeur;
 	}
 
+	public int getBreedte() {
+		return breedte;
+	}
+
+	public void setBreedte(int breedte) {
+		this.breedte = breedte;
+	}
 
 }
