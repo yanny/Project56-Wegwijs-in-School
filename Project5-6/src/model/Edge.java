@@ -42,11 +42,11 @@ public class Edge {
 		this.gewicht = gewicht;
 	}
 
-	void setTarget(Vertex target) {
+	public void setTarget(Vertex target) {
 		this.target = target;
 	}
 
-	Vertex getTarget() {
+	public Vertex getTarget() {
 		return target;
 	}
 }

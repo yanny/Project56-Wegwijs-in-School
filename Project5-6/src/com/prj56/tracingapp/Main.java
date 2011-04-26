@@ -25,7 +25,6 @@ public class Main extends Activity {
 		b1.setOnClickListener(new View.OnClickListener() {
 			public void onClick(View view) {
 				Intent intent = new Intent(view.getContext(), Bestemming.class);
-
 				startActivity(intent);
 			}
 		});

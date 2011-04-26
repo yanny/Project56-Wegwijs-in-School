@@ -7,28 +7,24 @@ import com.j256.ormlite.table.DatabaseTable;
 public class Vak {
 	@DatabaseField(generatedId = true, columnName = "vakID", id=true)
 	Long id;
-
 	@DatabaseField
 	int rij;
-
 	@DatabaseField
 	int kolom;
-
 	@DatabaseField(foreign = true, columnName = "navigatiePuntID")
 	NavigatiePunt navigatiePunt;
-
 	@DatabaseField(foreign = true, columnName = "lokaalID")
 	Lokaal lokaal;
-
 	@DatabaseField(foreign = true, columnName = "rasterID")
 	Raster raster;
-
 	@DatabaseField
 	boolean heeftDeur;
-
 	@DatabaseField
 	int breedte;
+	@DatabaseField(foreign=true, columnName="vleugelID")
+	private Vleugel navigatieNaarvleugel;
 
+	
 	public Vak() {
 
 	}
@@ -102,6 +98,13 @@ public class Vak {
 
 	public void setBreedte(int breedte) {
 		this.breedte = breedte;
+	}
+	public Vleugel getNavigatieNaarvleugel() {
+		return navigatieNaarvleugel;
+	}
+
+	public void setNavigatieNaarvleugel(Vleugel navigatieNaarvleugel) {
+		this.navigatieNaarvleugel = navigatieNaarvleugel;
 	}
 
 }
